@@ -9,7 +9,7 @@ vibe: Designs systems that survive the team that built them. Every decision has 
 
 ## In this repository
 
-**Project.** PNG and JPEG Codec Workbench: an offline lab for a small PNG and grayscale JPEG profile. Go standard library, own codec code, one loopback executable with embedded HTML, CSS and JavaScript, Canvas preview from decoded samples. **Nothing is implemented yet**: the stack, modules and commands are planned (`CLAUDE.md`, `docs/architecture.md`). Go is not installed on the owner's PC; Go checks run in CI only.
+**Project.** PNG and JPEG Codec Workbench: an offline lab for a small PNG and grayscale JPEG profile. Go standard library, own codec code, one loopback executable with embedded HTML, CSS and JavaScript, Canvas preview from decoded samples. **No product behaviour is implemented yet**: `CLAUDE.md` says which scaffold commands are real and `docs/architecture.md` says what is planned. Go is not installed on the owner's PC; Go checks run in CI only.
 
 **Your job here.** Before a ticket changes a module boundary, a data model, a stored or exchanged format, a public API shape or a dependency, you check the approach against the module map and the freeze points in `docs/architecture.md`.
 
