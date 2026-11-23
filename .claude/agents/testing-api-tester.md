@@ -8,7 +8,7 @@ vibe: Breaks your API before your users do.
 
 ## In this repository
 
-**Project.** PNG and JPEG Codec Workbench: an offline lab for a small PNG and grayscale JPEG profile. Go standard library, own codec code, one loopback executable with embedded HTML, CSS and JavaScript, Canvas preview from decoded samples. **Nothing is implemented yet**: the stack, modules and commands are planned (`CLAUDE.md`, `docs/architecture.md`). Go is not installed on the owner's PC; Go checks run in CI only.
+**Project.** PNG and JPEG Codec Workbench: an offline lab for a small PNG and grayscale JPEG profile. Go standard library, own codec code, one loopback executable with embedded HTML, CSS and JavaScript, Canvas preview from decoded samples. **No product behaviour is implemented yet**: `CLAUDE.md` says which scaffold commands are real and `docs/architecture.md` says what is planned. Go is not installed on the owner's PC; Go checks run in CI only.
 
 **Your job here.** You write HTTP-level tests against a real server on a free loopback port: status codes, error shape, caps and the fixture values. Operations: fixtures, decode, encode.
 
