@@ -4,9 +4,9 @@ The full repository instructions are in [CLAUDE.md](CLAUDE.md). This file repeat
 
 ## Status
 
-Nothing is implemented. The repository holds the plan (`docs/PROJECT-PLAN.md`), the delivery tooling and the backlog (epic #1). Go is not installed on the owner's PC; Go checks run in CI only.
+Only the scaffold exists and no product behaviour. The repository holds the plan (`docs/PROJECT-PLAN.md`), the delivery tooling, the backlog (epic #1) and a runnable scaffold; its commands are verified in CI only, nothing was run locally. Go is not installed on the owner's PC; Go checks run in CI only.
 
-## Commands (planned; the scaffold makes the first ones real)
+## Commands (build, gofmt, vet and test are real (scaffold), verified in CI only; the rest is planned)
 
 ```
 go build -o codeclab ./cmd/codeclab
@@ -14,6 +14,7 @@ gofmt -l .
 go vet ./...
 go test ./...
 ./codeclab serve
+./codeclab decode <file>
 ./codeclab inspect <file>
 ./codeclab encode --format png <raster.json>
 ./codeclab verify

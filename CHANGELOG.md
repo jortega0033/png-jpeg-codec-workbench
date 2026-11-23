@@ -7,3 +7,5 @@ All notable changes to this project are recorded here, in the [Keep a Changelog]
 ### Added
 
 - Delivery tooling: review gate hook, CI workflow, pull request and issue templates, `next-ticket` driver, UI quality rules and the `ui-ux-pro-max` and `unslop` skills.
+- Design tokens (Pipenzo Flow look) and their rules.
+- Runnable Go scaffold: module, empty packages with smoke tests, `codeclab` help, version and stubs, and the `go` CI job.
