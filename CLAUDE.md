@@ -6,7 +6,7 @@ Working instructions for this repository. Read this file first, then the documen
 
 A local lab for people learning image formats: open a supported PNG or grayscale JPEG, read its chunks or markers, inspect the decoded samples, encode a raster and measure the difference. Go standard library, own framing, filters, transforms and entropy coding, `127.0.0.1` only, original fixtures.
 
-**Nothing is implemented yet.** The repository holds the plan, the delivery tooling and the backlog in epic #1. Commands marked planned below do not work yet. Do not describe a planned thing as working, and do not claim a passing baseline: there is none.
+Only the scaffold exists and no product behaviour. The repository holds the plan, the delivery tooling, the backlog in epic #1 and a runnable scaffold (verified in CI only; nothing was run locally). Commands marked planned below do not work yet. Do not describe a planned thing as working, and do not claim a passing baseline: there is none.
 
 ## Sources of truth
 
@@ -40,10 +40,10 @@ Go is not installed on the owner's PC and nothing is installed globally. **Go ch
 
 | Purpose | Command | Status |
 |---|---|---|
-| Build | `go build -o codeclab ./cmd/codeclab` | planned: real with the scaffold |
-| Format check (empty output is good) | `gofmt -l .` | planned: real with the scaffold |
-| Static check | `go vet ./...` | planned: real with the scaffold |
-| Tests | `go test ./...` | planned: real with the scaffold |
+| Build | `go build -o codeclab ./cmd/codeclab` | real (scaffold), verified in CI only |
+| Format check (empty output is good) | `gofmt -l .` | real (scaffold), verified in CI only |
+| Static check | `go vet ./...` | real (scaffold), verified in CI only |
+| Tests | `go test ./...` | real (scaffold), verified in CI only |
 | Run the app | `./codeclab serve` | planned: #2 |
 | Inspect a file | `./codeclab inspect <file>` | planned: #3 (PNG), #5 (JPEG) |
 | Encode a raster | `./codeclab encode --format png <raster.json>` | planned: #4 (PNG), #6 (JPEG) |

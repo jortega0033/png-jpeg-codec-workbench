@@ -14,7 +14,7 @@ concurrency:
 
 jobs:
   hook:
-    # Review gate hook self-test. The scaffold adds the product jobs.
+    # Review gate hook self-test.
     name: hook (${{ matrix.os }})
     runs-on: ${{ matrix.os }}
     strategy:
@@ -28,3 +28,33 @@ jobs:
           python-version: "3.13"
       - name: Review gate hook self-test
         run: python .claude/hooks/role_gate.py --self-test
+
+  go:
+    name: go (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    env:
+      GOPROXY: "off"
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-go@d8cbb8045d7f43706b9177cceb36c1f91a6644d5 # v7.1.0
+        with:
+          go-version-file: go.mod
+          cache: false
+      - name: gofmt
+        shell: bash
+        run: |
+          out="$(gofmt -l .)"
+          if [ -n "$out" ]; then
+            echo "$out"
+            exit 1
+          fi
+      - name: go vet
+        run: go vet ./...
+      - name: go build
+        run: go build ./...
+      - name: go test
+        run: go test ./...
