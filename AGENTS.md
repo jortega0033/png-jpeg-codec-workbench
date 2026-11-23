@@ -14,6 +14,7 @@ gofmt -l .
 go vet ./...
 go test ./...
 ./codeclab serve
+./codeclab decode <file>
 ./codeclab inspect <file>
 ./codeclab encode --format png <raster.json>
 ./codeclab verify

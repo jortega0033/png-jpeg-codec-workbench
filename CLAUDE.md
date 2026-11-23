@@ -45,6 +45,7 @@ Go is not installed on the owner's PC and nothing is installed globally. **Go ch
 | Static check | `go vet ./...` | real (scaffold), verified in CI only |
 | Tests | `go test ./...` | real (scaffold), verified in CI only |
 | Run the app | `./codeclab serve` | planned: #2 |
+| Decode a file to raw samples | `./codeclab decode <file>` | planned: #3 (PNG), #5 (JPEG) |
 | Inspect a file | `./codeclab inspect <file>` | planned: #3 (PNG), #5 (JPEG) |
 | Encode a raster | `./codeclab encode --format png <raster.json>` | planned: #4 (PNG), #6 (JPEG) |
 | Release checks | `./codeclab verify` | planned: #7 |

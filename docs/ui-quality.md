@@ -21,6 +21,6 @@ Binding rules for the pages of this project (`web/`) and for every user-facing s
 - User-facing copy, documentation and pull request text go through the `unslop` skill (`.claude/skills/unslop/`) before the pull request is opened.
 - Frontend Developer, Accessibility Auditor and Code Reviewer name this file in their checklists (`.claude/agents/`). The Code Reviewer gate runs on every ticket and is where these rules are enforced.
 - Rule 1 can be linted, for example `grep -rnE "border-(left|right|top|bottom)[^;]*[2-9]px" web/`. Rule 2 cannot be detected reliably from CSS, so it is a review check.
-- The repository rules in `CLAUDE.md` still apply: native HTML, CSS and JavaScript, same-origin assets only, no CDN or external font. No UI source exists yet, so nothing is checked today; every UI ticket applies the rules to its own new screens.
+- The repository rules in `CLAUDE.md` still apply: native HTML, CSS and JavaScript, same-origin assets only, no CDN or external font. No screen exists yet (only `tokens.css`), so nothing is checked today; every UI ticket applies the rules to its own new screens.
 - The checkerboard behind transparent pixels is data display, not decoration.
 - Colours, type and spacing come from the shared tokens in `web/tokens.css`; see [design-tokens.md](design-tokens.md).

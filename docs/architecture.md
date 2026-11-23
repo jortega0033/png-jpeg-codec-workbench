@@ -6,7 +6,7 @@ Status: **only the scaffold exists, no product behaviour** (packages are empty a
 
 | Boundary | Module | Owns | Parent ticket |
 |---|---|---|---|
-| Entry point | `cmd/codeclab` | Subcommands `serve`, `decode`, `encode`, `inspect` | #2 (`serve`), #3 to #6 (codec commands), #7 |
+| Entry point | `cmd/codeclab` | Subcommands `serve`, `decode`, `encode`, `inspect`, `verify` | #2 (`serve`), #3 to #6 (codec commands), #7 (`verify`) |
 | Raster and report | `internal/raster` | Raster contract, RGBA expansion, limits, error categories, inspection report | #2 |
 | PNG | `internal/pngcodec` | Chunks, inflate bound, filters; encoder | #3 (decode), #4 (encode) |
 | JPEG | `internal/jpegcodec` | Markers, Huffman, transforms, blocks; encoder and difference | #5 (decode), #6 (encode) |
@@ -15,7 +15,9 @@ Status: **only the scaffold exists, no product behaviour** (packages are empty a
 | Browser assets | `web/ (embedded)` | Preview, sample inspector, structure report, export | #2, then each codec ticket |
 | Verification | `internal/verify` | Both paths, regressions, report | #7 |
 
-Dependency direction: `httpapi` and `cmd/codeclab` depend on `pngcodec`, `jpegcodec`, `fixtures` and `raster`; `pngcodec`, `jpegcodec` and `fixtures` depend on `raster` only. `raster` imports nothing from the module.
+Dependency direction: `httpapi`, `verify` and `cmd/codeclab` depend on `pngcodec`, `jpegcodec`, `fixtures` and `raster`; `cmd/codeclab` also depends on `httpapi` and `verify`, and `httpapi` on `web`; `pngcodec`, `jpegcodec` and `fixtures` depend on `raster` only. `raster` imports nothing from the module. `image/png` and `image/jpeg` appear in no non-test file, `verify` included.
+
+Tickets also write `docs/jpeg-quantizer.md` (#6) and `docs/verification-report.md` (#7), and #7 adds a `verify` job to `.github/workflows/ci.yml`. [ui-quality.md](ui-quality.md) holds the UI checks.
 
 ## Freeze points
 
@@ -27,4 +29,4 @@ Parallel tickets rely on these shapes. A ticket that changes a frozen shape upda
 
 ## What is verified where
 
-Go is verified in CI only (see [CLAUDE.md](../CLAUDE.md)), on Linux, the supported platform. Manual browser steps are owner checks in Chrome.
+Go is verified in CI only (see [CLAUDE.md](../CLAUDE.md)). The `go` job runs on Linux, the supported platform, and on Windows. Manual browser steps are owner checks in Chrome.
