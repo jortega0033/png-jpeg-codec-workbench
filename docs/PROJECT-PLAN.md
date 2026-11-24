@@ -1,5 +1,7 @@
 # PNG and JPEG Codec Workbench
 
+> This document specifies phase 1 of the program in [#34](https://github.com/jortega0033/png-jpeg-codec-workbench/issues/34). Hour figures in it are early estimates for that phase; its open tickets add up to 56 to 86 hours (2026-11-24). Work that it defers is planned in the later phases only where the program names it.
+
 ## Product requirements
 
 Give people learning image formats a local place to see what a codec reads and writes. They can open an original sample or a supported file, inspect the chunk or marker sequence, and preview the pixels reconstructed by the project's decoder. They can also encode a bundled raster, inspect the output and measure its differences from the source.

@@ -38,3 +38,13 @@ The plan leaves these open. Each is a recommendation by the orchestrator, adopte
 | #7 | Verification command | `./codeclab verify` prints one line per check and exits non-zero on the first failure; CI runs it on Linux. |
 | all | Owner checks | Manual browser steps run in Chrome by the owner. |
 | none | Licence | MIT, added by the owner on 2026-11-23 (`LICENSE`). No ticket changes it. |
+
+## Program decisions (owner, 2026-11-24)
+
+The owner accepted the goal and each suggestion below. They apply from the phase they name; the rules of `CLAUDE.md` hold for phase 1 as written.
+
+| Decision | Implemented in |
+|---|---|
+| The repository has a program goal above phase 1: a family of image codecs from the specifications, in six phases. | Program issue #34 |
+| Production use of `compress/zlib` ends with the own DEFLATE. Suggested: keep it as test oracle. | Program issue #34 |
+| Patents and licences of AVIF and JPEG XL test files. Suggested: the owner checks before that phase. | Program issue #34 |
