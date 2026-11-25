@@ -8,7 +8,7 @@ Only a runnable scaffold exists; the codecs and the workbench are planned. The s
 - [Technical design](docs/PROJECT-PLAN.md#technical-design)
 - [Implementation backlog and epic](https://github.com/jortega0033/png-jpeg-codec-workbench/issues)
 
-Estimated implementation and verification effort is 23–36 engineering hours.
+The first plan of phase 1 said 23–36 engineering hours. Its open tickets, with tests and review, add up to 56 to 86 hours; the whole program is larger and is described below. All figures are estimates.
 
 ## Program goal
 
